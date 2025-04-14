@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: inventoryservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/inventory-service?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: root
+    password: 123456
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        ddl-auto: create-drop
+
+server:
+  port: 9083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka
