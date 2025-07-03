@@ -56,7 +56,7 @@ public class ProductServiceImpl implements ProductService {
             List<Product> products = productRepository.findAll();
             List<ProductResponse> productResponses = products.stream()
                     .map(this::mapToProductResponse)
-                    .toList();
+                     .toList();
             response.setStatus("00");
             response.setMessage("Products fetched successfully");
             response.setData(productResponses);
